@@ -1,3 +1,5 @@
+import { NumericLiteral } from "typescript";
+
 //tipado inferido
 let mati = {
     nombre: 'Matias',
@@ -27,6 +29,16 @@ let diego: Estudiante = {
 }
 
 // Investiga la palabra reservada implements
+// class conformed by a certain interface
+interface A {
+    propA : string,
+    propB : number
+}
+class Example implements A {
+    propA = 'Hello World';
+    propB = 2022
+}
+const obj = new Example()
 
 // Existe otra alternativa para realizar lo mismo?
 // Si, types.
@@ -48,5 +60,9 @@ let Fede: Student = {
 }
 
 //Investiga sus diferencias
-
+// type nombre = string ---> se puede declarar como dato primitivo, interface no
+// type no se puede duplicar, interfaz si y luego se combinan
+// Su forma de union es diferente
+// type typeTwo = typeOne & --->  uses &
+// interface Two extends One ---> uses extends
 export {}

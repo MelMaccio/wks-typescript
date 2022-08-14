@@ -39,7 +39,7 @@ let anyValue: any = "Matias";
 let unkValue: unknown = "Matias";
 
 let str1: string = anyValue; // Todo OK, puedo asignarlo
-// let str2: string = unkValue; // Error: Type 'unknown' is not assignable to type 'string'.
+//let str2: string = unkValue; // Error: Type 'unknown' is not assignable to type 'string'.
 
 let str3: string = unkValue as string; // Explicit cast
 
@@ -50,6 +50,6 @@ anyValue.metodo(); // Todo OK, compila. Falla en tiempo de ejecución si el mét
 let iDontKnow: unknown = "typescript";
 
 //ejercicio
-let nowIKnow: string = iDontKnow; //utiliza el casteo explicito para asignarle a nowIKnow un string;
+let nowIKnow: string = iDontKnow as string; //utiliza el casteo explicito para asignarle a nowIKnow un string;
 
 export {}
